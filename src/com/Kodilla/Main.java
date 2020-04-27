@@ -19,6 +19,13 @@ public class Main {
         phone.numberEven(20);
         //metoda z 2 parametrami , min i max
         phone.numberEvenMinToMax(10,16);
+        //metoda zwracajaca liczbe podzielna przez 3 i 5
+        phone.isDevided(4,18);
+        //metoda sumujaca liczby parzyste z przedzialu
+        phone.getEvenSum(5,9);
+        //metoda zwracająca liczby od min do max
+        phone.getNumberReverse(5,-2);
+
 
 
 
@@ -73,6 +80,31 @@ class MobilePhone{
             if(i%2==0) {
                 System.out.println(i);
             }
+        }
+    }
+    public void isDevided(int numberMin, int numberMax){
+        int counter=0;
+        for (int i = numberMin; i <=numberMax ; i++) {
+            if(i%3==0||i%5==0){
+              counter++;
+            }
+        }
+        System.out.println(counter);
+    }
+    public void getEvenSum(int minEvenNumber , int maxEvenNumber){
+        int sumOfNumbersEven=0;
+        for (int i = minEvenNumber; i <=maxEvenNumber ; i++) {
+            if(i%2==0){
+                sumOfNumbersEven+=i;
+            }
+        }
+        System.out.println(sumOfNumbersEven);
+
+    }
+    public void getNumberReverse(int minValue , int maxValue){
+        for (int i = minValue; i >=maxValue ; i--) {
+            System.out.println(i);
+
         }
     }
 
